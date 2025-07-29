@@ -1,0 +1,87 @@
+.add-item-button {
+  padding: 10px 20px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.add-item-popup {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+}
+
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-item-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.add-item-form input,
+.add-item-form textarea,
+.add-item-form select {
+  padding: 8px;
+  border: 1px solid #b0bec5;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background-color: #43a047;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.remove-img-btn {
+  background-color: #e53935;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #444;
+}
