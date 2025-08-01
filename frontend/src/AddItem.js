@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './AddItem.css';
+import ClasifyItem from './ClasifyItem.js';
 
 function AddItem({ fetchItems }) {
   const [itemData, setItemData] = useState({
@@ -147,6 +148,7 @@ function AddItem({ fetchItems }) {
           </div>
         </div>
       )}
+      <ClasifyItem fetchItems={fetchItems} />
     </>
   );
 }

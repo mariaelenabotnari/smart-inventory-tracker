@@ -85,7 +85,7 @@ function ModifyItems({ items, fetchItems }) {
   };
 
   const groupedByCategory = items.reduce((acc, item) => {
-    const { category } = item;
+    const category = item.category?.trim().toLowerCase() || 'uncategorized';
     acc[category] = acc[category] || [];
     acc[category].push(item);
     return acc;
@@ -103,7 +103,7 @@ function ModifyItems({ items, fetchItems }) {
     <div className="items-container">
       {Object.entries(groupedByCategory).map(([category, itemsInCat]) => (
         <div className="category-group" key={category}>
-          <h2>{category.toUpperCase()}</h2>
+          <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
           <div className="item-cards">
             {itemsInCat.map((item) => (
               <div className="item-card" key={item.id}>
