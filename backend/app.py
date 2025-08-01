@@ -3,6 +3,7 @@ from flask_cors import CORS
 from models.user import db  # Import db from models
 from routes.auth_routes import auth_bp
 from routes.item_routes import items_bp
+from routes.item_classification_routes import classification_bp
 from flask_login import LoginManager
 from models.user import User
 
@@ -28,6 +29,7 @@ login_manager.login_view = 'routes.auth_routes'
 # Register blueprints
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(items_bp)
+app.register_blueprint(classification_bp)
 
 @login_manager.user_loader
 def load_user(user_id):
